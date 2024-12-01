@@ -4,16 +4,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Here are the technologies used in this project:
 
-- ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
-- ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white)
-- ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)
-- ![Sequelize](https://img.shields.io/badge/-Sequelize-52B0E7?logo=sequelize&logoColor=white)
-- ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
-- ![Express](https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white)
-- ![React Icons](https://img.shields.io/badge/-React%20Icons-EFD81D?logo=react&logoColor=white)
-- ![Material-UI (MUI)](https://img.shields.io/badge/-Material%20UI-007FFF?logo=mui&logoColor=white)
-- ![Styled Components](https://img.shields.io/badge/-Styled%20Components-DB7093?logo=styled-components&logoColor=white)
-- ![NextAuth](https://img.shields.io/badge/-NextAuth-000000?logoColor=white)
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
+ ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white)  ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)
+ ![Sequelize](https://img.shields.io/badge/-Sequelize-52B0E7?logo=sequelize&logoColor=white)
+ ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
+ ![Express](https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white)
+ ![React Icons](https://img.shields.io/badge/-React%20Icons-EFD81D?logo=react&logoColor=white)
+ ![Material-UI (MUI)](https://img.shields.io/badge/-Material%20UI-007FFF?logo=mui&logoColor=white)
+ ![Styled Components](https://img.shields.io/badge/-Styled%20Components-DB7093?logo=styled-components&logoColor=white)
+ ![NextAuth](https://img.shields.io/badge/-NextAuth-000000?logoColor=white)
 
 
 
