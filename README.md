@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-## About Us
+## About [All 4 Less]
 
 Welcome to All 4 Less! We are your one-stop destination for the best deals and the widest variety of products available online. Our mission is simple: to provide you with everything you need at unbeatable prices, all in one convenient place.
 
