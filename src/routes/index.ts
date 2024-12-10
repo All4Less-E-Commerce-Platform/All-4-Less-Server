@@ -2,16 +2,10 @@ import { Router } from 'express';
 
 import authRouter from './auth';
 import { Products } from '../models';
+import { ProductsRouter } from './Products';
 
-const controller = async (
-  req: any,
-  res: { json: (arg0: Products[]) => void },
-) => {
-  const products = await Products.findAll({ where: {} });
-  res.json(products);
-};
 const router = Router();
-router.get('/products', controller);
-router.use(authRouter);
+
+router.use('/products', ProductsRouter);
 
 export default router;

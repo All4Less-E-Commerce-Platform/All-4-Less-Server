@@ -92,7 +92,7 @@ export const gitDataHandler = async () => {
   };
 
   const ElectronicsOptions = {
-    url: 'https://insights.alibaba.com/openservice/gatewayService',
+    url: 'https://insigresponsehts.alibaba.com/openservice/gatewayService',
     params: {
       callback: 'jsonp_1733658642177_95549',
       ctoken: 'undefined',
@@ -156,8 +156,8 @@ export const gitDataHandler = async () => {
       deliveryBomId: '',
       categoryIds: '36',
       topOfferIds: '',
-      pageSize: '20',
-      pageNo: '3',
+      pageSize: '1000',
+      pageNo: '1',
       offerLimit: '',
       appKey: 'vee8meczxjj3hugfjlmg0t4zh4skimd3',
       appNameCarry: 'asinHomePage',
@@ -170,6 +170,29 @@ export const gitDataHandler = async () => {
     },
   };
 
+  const IndustrialMachineryOptions = {
+    url: 'https://insights.alibaba.com/openservice/gatewayService',
+    params: {
+      callback: 'jsonp_1733841094556_26879',
+      ctoken: 'undefined',
+      _tb_token_: 'undefined',
+      mtop: 'false',
+      modelId: '74',
+      deliveryId: '4066512_902915206_STOCK_25_95682161',
+      categoryIds: '43', // Make sure to use the category ID for Industrial Machinery if different
+      pageSize: '1000',
+      pageNo: '1',
+      offerLimit: '',
+      appKey: 'vee8meczxjj3hugfjlmg0t4zh4skimd3',
+      appNameCarry: 'asinHomePage',
+      appName: 'asinHomePage',
+      endpoint: 'pc',
+      pageDeduplicateId: 'r+jzh7oyghscas/2173384057459331774ba2f8855',
+      need_reweight: 'false',
+      reweight_ids: 'rts',
+      reweight_value: '1.2',
+    },
+  };
   const GitHomeData = async () => {
     try {
       await axios.request(Homeoptions).then(async (response: { data: any }) => {
@@ -319,6 +342,76 @@ export const gitDataHandler = async () => {
             );
           });
           console.log('Consumer Electronics created successfully');
+        });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const GitIndustrialMachinery = async () => {
+    try {
+      await axios
+        .get(IndustrialMachineryOptions.url, {
+          params: IndustrialMachineryOptions.params,
+          headers: {
+            Accept: 'application/json',
+            'User-Agent':
+              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Safari/537.36',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Sec-Fetch-Site': 'same-site',
+            'Sec-Fetch-Mode': 'no-cors',
+            'Sec-Fetch-Dest': 'script',
+            Referer: 'https://sale.alibaba.com/',
+          },
+        })
+        // eslint-disable-next-line promise/prefer-await-to-then
+        .then(async (response: { data: any }) => {
+          const { data } = response;
+          const jsonpStart = data.indexOf('(') + 1;
+          const jsonpEnd = data.lastIndexOf(')');
+          const jsonString = data.substring(jsonpStart, jsonpEnd);
+          const jsonObject = JSON.parse(jsonString);
+          if (jsonObject.data.list.length === 0) {
+            return null;
+          }
+          let ran = await Ranks.findOne({
+            where: { rankName: 'Industrial Machinery' },
+          });
+          if (!ran) {
+            console.log('Industrial Machinery ran not found');
+            ran = await Ranks.create({
+              rankName: 'Industrial Machinery',
+              rankNameEn: 'Industrial Machinery',
+              rankWord: 'Industrial Machinery',
+              rankWordEn: 'Industrial Machinery',
+              rankDescription: 'Industrial Machinery',
+              rankDescriptionEn: 'Industrial Machinery',
+            });
+          }
+
+          const id = String(ran.dataValues.id);
+
+          Products.destroy({ where: { rankId: id }, logging: false });
+
+          jsonObject.data.list.forEach(async (item: any) => {
+            const checkExist = await Products.findOne({
+              where: { productId: item.productId },
+            });
+            if (checkExist) {
+              return;
+            }
+            Products.create(
+              {
+                ...item,
+                category: 'Industrial Machinery',
+                rankId: id,
+                price: item.alibabaGuaranteedPrice,
+              },
+              { logging: false },
+            );
+          });
+          console.log('Industrial Machinery created successfully');
         });
     } catch (error) {
       console.error(error);
@@ -529,6 +622,7 @@ export const gitDataHandler = async () => {
     await GitElectronics();
     await GitShoes();
     await GitWatches();
+    await GitIndustrialMachinery();
     console.log('Finished');
   };
 
