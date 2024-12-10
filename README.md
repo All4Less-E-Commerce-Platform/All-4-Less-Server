@@ -4,15 +4,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Here are the technologies used in this project:
 
-![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
-![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)
-![Sequelize](https://img.shields.io/badge/-Sequelize-52B0E7?logo=sequelize&logoColor=white)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white)
-![React Icons](https://img.shields.io/badge/-React%20Icons-EFD81D?logo=react&logoColor=white)
-![Material-UI (MUI)](https://img.shields.io/badge/-Material%20UI-007FFF?logo=mui&logoColor=white)
-![Styled Components](https://img.shields.io/badge/-Styled%20Components-DB7093?logo=styled-components&logoColor=white)
-![NextAuth](https://img.shields.io/badge/-NextAuth-000000?logoColor=white)
+- ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
+- ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white)
+- ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)
+- ![Sequelize](https://img.shields.io/badge/-Sequelize-52B0E7?logo=sequelize&logoColor=white)
+- ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
+- ![Express](https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white)
+- ![React Icons](https://img.shields.io/badge/-React%20Icons-EFD81D?logo=react&logoColor=white)
+- ![Material-UI (MUI)](https://img.shields.io/badge/-Material%20UI-007FFF?logo=mui&logoColor=white)
+- ![Styled Components](https://img.shields.io/badge/-Styled%20Components-DB7093?logo=styled-components&logoColor=white)
+- ![NextAuth](https://img.shields.io/badge/-NextAuth-000000?logoColor=white)
+
+
 
 ## Getting Started
 
@@ -38,19 +41,19 @@ At All 4 Less, we believe shopping should be affordable, easy, and enjoyable. Fo
 
 ## What We Offer
 
-- From everyday essentials to the latest trends, we’ve got it all. Our catalog includes:
+* From everyday essentials to the latest trends, we’ve got it all. Our catalog includes:
 
-- Electronics and gadgets
+* Electronics and gadgets
 
-- Fashion and accessories
+* Fashion and accessories
 
-- Home and kitchen essentials
+* Home and kitchen essentials
 
-- Beauty and personal care products
+* Beauty and personal care products
 
-- And so much more!
+* And so much more!
 
-We constantly update our inventory to bring you the latest and greatest products from around the world. Whether you’re looking for a great bargain or something unique, you’ll find it here.
+ We constantly update our inventory to bring you the latest and greatest products from around the world. Whether you’re looking for a great bargain or something unique, you’ll find it here.
 
 ## Why Choose Us?
 

@@ -13,5 +13,8 @@
   },
   "editor.formatOnSave": true,
   "eslint.workingDirectories": ["Dashboard"],
-  "cSpell.words": ["cloudinary"]
+  "cSpell.words": [
+    "cloudinary",
+    "Homeoptions"
+  ]
 }

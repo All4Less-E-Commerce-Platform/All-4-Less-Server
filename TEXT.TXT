@@ -1,0 +1,2 @@
+Request URL:
+https://insights.alibaba.com/openservice/gatewayService?callback=jsonp_1733491079041_45295&ctoken=icjfz8g9qi8d&_tb_token_=a76d0ab3be7b&mtop=false&modelId=74&deliveryId=4297509_902971402_STOCK_25_33367529&cardId=&deliveryBomId=&categoryIds=322&topOfferIds=&pageSize=20&pageNo=6&offerLimit=&appKey=vee8meczxjj3hugfjlmg0t4zh4skimd3&appNameCarry=asinHomePage&appName=asinHomePage&endpoint=pc&pageDeduplicateId=bns0h2/8nmacas/2173349102759930a74179104c2&need_reweight=false&reweight_ids=rts&reweight_value=1.2
