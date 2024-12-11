@@ -75,7 +75,7 @@ export const gitDataHandler = async () => {
     },
     headers: {
       Host: 'insights.alibaba.com',
-      Cookie: `ali_apache_id=33.1.245.61.1730636230584.644454.4; sc_g_cfg_f=sc_b_currency=EGP&sc_b_locale=en-US&sc_b_site=PS; cookie2=a34f151aa2d8c16d32eae5faad0b82ed; icbu_s_tag=9_11; cna=R+jZH7OYGhsCAS/2gMwsH/FL; buyer_ship_to_info=local_country=PS; xman_us_f=x_l=0; acs_usuc_t=acs_rt=b3cb014a999949e59af28b63410b5e06; xman_t=PQIAA500vNFL+H7ASyVo/4Ky40pXLWzKJYKMzDmS5BuVIheryo+BoAtrifdR72hD13cqbUtDILlWDQet+8f6A2TdFIfP8Y6j; xman_f=ZAOfW1oHBd7M1zQKYkXZ1ynrf/S0vE8gEuzoud81hDeP8pusTWeHEmWC9SolZAhkF+is7CeBU++zCaZQk6aQP7H50WyN7q5TxouhISEN5dtnswhx3Dn0+A==; seo_f=trafc_i=seo; ali_apache_track=; ali_apache_tracktmp=; NWG=SNW; _m_h5_tk=c481cd4d15f4f6625bd3b01553b14cd8_1733495724651; _m_h5_tk_enc=ddc89557ce2fbe599932b7dd40b18cb1; ug_se_c=organic_1733493872509; isg=BFJSDJjBYb68qJ02Jg59ljrqoxE0Y1b9HwyurxyvY4TbL_gpB_FBDMsBm5MTX86V; tfstk=f8gjUu1FKW2rq9K2A1dzF96kRv4_lATE61NttfQV6rUABOhLUI4Z0h4_fAyru-l4kzctsANZ0AlYrRMtdZ74ul815fnuQZ3ssNNt6AA0QIxrij4gWpJeUelmi4OPA53fk7e-ZWeOkYci-4zgWpJyocImrPDhoVTqXbd7_5WABAEYe7FQe5IYWAe82WFFHPHTWQa8TWeOMlEYyUFUeRUTHAURwj0pM7_zUjOr2oXKVNfEZ8_ORTV4DEhObZ743SZjWyw7Yku7GowLqbV4bVGI6qzSAOKxOz0Ub4hy5a4qO0U8GALpHuc-xxVsZtK4HDcEPrk6yizTk8UqkPfHsucL3ru706SxOk2bl4EdFEyxxbnUf4WfRPujwqPoC6Iqilnrok02eZaKxjzqXYL5lvIrWwyISDj6f07_NJRWNGjMrDIXHd9nTmZYZ7BMNQseMoFuN8RWNGX0D7V-LQO5YIC..`,
+      Cookie: `sc_g_cfg_f=sc_b_currency=USD&sc_b_locale=en_US; ali_apache_id=33.1.245.61.1730636230584.644454.4; cookie2=a34f151aa2d8c16d32eae5faad0b82ed; icbu_s_tag=9_11; cna=R+jZH7OYGhsCAS/2gMwsH/FL; buyer_ship_to_info=local_country=PS; xman_us_f=x_l=0; acs_usuc_t=acs_rt=b3cb014a999949e59af28b63410b5e06; xman_t=PQIAA500vNFL+H7ASyVo/4Ky40pXLWzKJYKMzDmS5BuVIheryo+BoAtrifdR72hD13cqbUtDILlWDQet+8f6A2TdFIfP8Y6j; xman_f=ZAOfW1oHBd7M1zQKYkXZ1ynrf/S0vE8gEuzoud81hDeP8pusTWeHEmWC9SolZAhkF+is7CeBU++zCaZQk6aQP7H50WyN7q5TxouhISEN5dtnswhx3Dn0+A==; seo_f=trafc_i=seo; ali_apache_track=; ali_apache_tracktmp=; NWG=SNW; _m_h5_tk=c481cd4d15f4f6625bd3b01553b14cd8_1733495724651; _m_h5_tk_enc=ddc89557ce2fbe599932b7dd40b18cb1; ug_se_c=organic_1733493872509; isg=BFJSDJjBYb68qJ02Jg59ljrqoxE0Y1b9HwyurxyvY4TbL_gpB_FBDMsBm5MTX86V; tfstk=f8gjUu1FKW2rq9K2A1dzF96kRv4_lATE61NttfQV6rUABOhLUI4Z0h4_fAyru-l4kzctsANZ0AlYrRMtdZ74ul815fnuQZ3ssNNt6AA0QIxrij4gWpJeUelmi4OPA53fk7e-ZWeOkYci-4zgWpJyocImrPDhoVTqXbd7_5WABAEYe7FQe5IYWAe82WFFHPHTWQa8TWeOMlEYyUFUeRUTHAURwj0pM7_zUjOr2oXKVNfEZ8_ORTV4DEhObZ743SZjWyw7Yku7GowLqbV4bVGI6qzSAOKxOz0Ub4hy5a4qO0U8GALpHuc-xxVsZtK4HDcEPrk6yizTk8UqkPfHsucL3ru706SxOk2bl4EdFEyxxbnUf4WfRPujwqPoC6Iqilnrok02eZaKxjzqXYL5lvIrWwyISDj6f07_NJRWNGjMrDIXHd9nTmZYZ7BMNQseMoFuN8RWNGX0D7V-LQO5YIC..`,
       'Sec-Ch-Ua': '"Brave";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
       'Sec-Ch-Ua-Mobile': '?0',
       'User-Agent':
@@ -428,6 +428,7 @@ export const gitDataHandler = async () => {
           const jsonpEnd = data.lastIndexOf(')');
           const jsonString = data.substring(jsonpStart, jsonpEnd);
           const jsonObject = JSON.parse(jsonString);
+
           if (jsonObject.data.list.length === 0) {
             return null;
           }
@@ -463,6 +464,8 @@ export const gitDataHandler = async () => {
               { logging: false },
             );
           });
+          console.log(jsonObject.data.list[0]);
+
           console.log('Apparel & Accessories created successfully');
         });
     } catch (error) {
