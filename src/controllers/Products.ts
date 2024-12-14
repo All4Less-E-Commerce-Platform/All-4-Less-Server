@@ -2,7 +2,8 @@ import { Op } from 'sequelize';
 import { Products } from '../models';
 import Rank from '../models/Ranks';
 import { stat } from 'fs';
-
+import axios from 'axios';
+import { scrapeData } from '../helpers/scraping/executing';
 export const gitWatchesController = async (
   req: any,
   res: { json: (arg0: { status: number; data: Products[] }) => void },
@@ -116,6 +117,41 @@ export const gitMachinesController = async (req: any, res: any) => {
 
   res.status(200).json({
     data: products,
+    status: 200,
+  });
+};
+
+export const gitProductController = async (req: any, res: any) => {
+  const { id } = req.params;
+
+  const product = await Products.findOne({
+    where: {
+      productId: id,
+    },
+  });
+
+  const url = (product as any).detailWap;
+
+  // eslint-disable-next-line promise/prefer-await-to-then
+  const data: any = await scrapeData(url);
+
+  // let htmlContent = `...your full HTML content...`;
+
+  // Remove the specific div using regex
+  let htmlContent = data.layout_overview.layout_overview_html;
+  htmlContent = htmlContent
+    .replace(
+      /<div class="im-alitalk-container button-item icon"[^>]*>.*?<\/div>/g,
+      '',
+    )
+    .replace(/<div class="module_sample"[^>]*>.*?<\/div>/g, '');
+
+  res.status(200).json({
+    data: {
+      ...product?.dataValues,
+      ...data,
+      layout_overview: { layout_overview_html: htmlContent },
+    },
     status: 200,
   });
 };

@@ -13,10 +13,10 @@ app.listen(port, async () => {
     .then(async () => {
       console.log('Database connection has been established successfully.');
     })
-    .catch(error => {
+    .catch((error: any) => {
       console.error('Unable to connect to the database:', error);
     });
-  await gitDataHandler();
+  // await gitDataHandler();
 });
 
 /// ///push the client side changes

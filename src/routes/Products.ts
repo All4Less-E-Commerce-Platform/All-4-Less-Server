@@ -7,6 +7,7 @@ import {
   gitFootwearController,
   gitHomeController,
   gitMachinesController,
+  gitProductController,
   gitProductsController,
   gitWatchesController,
 } from '../controllers/Products';
@@ -19,3 +20,4 @@ ProductsRouter.get('/clothes', errorWrapper(gitClothesController));
 ProductsRouter.get('/footwear', errorWrapper(gitFootwearController));
 ProductsRouter.get('/electronics', errorWrapper(gitElectronicsController));
 ProductsRouter.get('/machines', errorWrapper(gitMachinesController));
+ProductsRouter.get('/details/:id', errorWrapper(gitProductController));
